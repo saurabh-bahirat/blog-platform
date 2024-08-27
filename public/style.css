@@ -1,0 +1,148 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background: #f4f4f9;
+  color: #333;
+}
+
+/* Header Styles */
+header {
+  background: #3498db; /* Updated background color */
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+  margin: 0rem 17.5rem;
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem; /* Increased font size for the header */
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin: 0 1.5rem; /* Increased spacing between nav items */
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #f39c12; /* Changed hover color */
+  text-decoration: underline;
+}
+
+/* Main Content Styles */
+main {
+  padding: 2rem;
+  max-width: 900px; /* Increased max-width for better readability */
+  margin: 0 auto;
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+  border-radius: 8px; /* Added border radius for rounded corners */
+}
+
+/* Article Styles */
+article {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px; /* Rounded corners for articles */
+}
+
+article h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem; /* Increased font size for article titles */
+}
+
+article h2 a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+article h2 a:hover {
+  color: #3498db; /* Changed hover color to match header */
+}
+
+article p {
+  margin: 1rem 0;
+  line-height: 1.8;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Added gap between form elements */
+}
+
+form input[type="text"],
+form input[type="password"],
+form textarea {
+  width: 100%; /* Ensure both fields use full width of the parent container */
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+  box-sizing: border-box; /* Include padding and border in the width */
+  transition: border-color 0.3s;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus,
+form textarea:focus {
+  border-color: #3498db; /* Border color on focus */
+  outline: none;
+}
+
+form button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  background: #3498db; /* Updated button background color */
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s; /* Added transform for a button press effect */
+}
+
+form button:hover {
+  background: #2980b9; /* Darker shade on hover */
+}
+
+form button:active {
+  transform: scale(0.98); /* Button press effect */
+}
+/* Footer Styles */
+footer {
+  background: #3498db; /* Consistent background color */
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Shadow for separation */
+  position: fixed; /* Fixed position at the bottom */
+  bottom: 0;
+  left: 17.5rem; /* Align with the header's margin */
+  width: calc(100% - 35rem); /* Full width minus the left and right margins */
+}
+
+

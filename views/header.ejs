@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <h1>Blog Platform</h1>
+        <nav>
+            <ul>
+                <% if (userId) { %> <!-- Check if the user is logged in -->
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/compose">Compose</a></li>
+                    <li><a href="/myposts">My Posts</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                <% } else { %>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/register">Register</a></li>
+                <% } %>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Post</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <%- include('header') %>
+    <main>
+        <h2>Edit Post</h2>
+        <form action="/edit/<%= post._id %>" method="POST">
+            <input type="text" name="postTitle" value="<%= post.title %>" required>
+            <textarea name="postContent" required><%= post.content %></textarea>
+            <button type="submit">Update</button>
+        </form>
+    </main>
+    <%- include('footer') %>
+</body>
+</html>

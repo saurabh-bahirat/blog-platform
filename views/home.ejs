@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <%- include('header') %>
+    <main>
+        <% if (posts.length === 0) { %>
+            <p>No posts available.</p>
+        <% } else { %>
+            <% posts.forEach(post => { %>
+                <article>
+                    <h2><a href="/posts/<%= post._id %>"><%= post.title %></a></h2>
+                    <p><%= post.content.substring(0, 100) %>...</p>
+                    <% if (post.userId && userId && post.userId.toString() === userId.toString()) { %>
+                        <a href="/edit/<%= post._id %>">Edit</a>
+                        <form action="/delete/<%= post._id %>" method="POST" style="display:inline;">
+                            <button type="submit">Delete</button>
+                        </form>
+                    <% } %>
+                </article>
+            <% }); %>
+        <% } %>
+    </main>
+    <%- include('footer') %>
+</body>
+</html>
